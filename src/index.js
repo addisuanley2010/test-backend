@@ -8,7 +8,6 @@ dotenv.config();
 app.use(express.json());
 app.use(cors());
 
-// const MONGODB_URL='mongodb://localhost:27017/mymusic'
 
 app.use("/", musicRoute);
 
