@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  my_music_db:
+    container_name: music_db_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - my_music_db:/data/db
+    
+  app:
+    build: .
+    ports:
+      - 4000:3001
+    environment:
+      PORT: 3001
+      DB_URI: mongodb://my_music_db:27017/docker_music
+    depends_on:
+      - my_music_db
+    volumes:
+      - ./src:/app/src
+   
+volumes:
+  my_music_db: {}
+  
