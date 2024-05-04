@@ -14,7 +14,6 @@ COPY ./src ./src
 
 COPY ./.env .
 
-EXPOSE 4000
 
 CMD ["npm", "start"]
 
