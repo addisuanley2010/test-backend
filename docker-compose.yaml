@@ -11,7 +11,7 @@ services:
   app:
     build: .
     ports:
-      - 3001:3001
+      - 4000:4000
     environment:
       PORT: 3001
       DB_URI: mongodb://my_music_db:27017/docker_music
