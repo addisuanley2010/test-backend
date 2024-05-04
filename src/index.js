@@ -8,6 +8,7 @@ dotenv.config();
 app.use(express.json());
 app.use(cors());
 
+const port = process.env.PORT || 4000;
 
 app.use("/", musicRoute);
 
@@ -15,7 +16,7 @@ try {
   mongoose
     .connect(process.env.DB_URI)
     .then(() => {
-      app.listen(process.env.PORT||3001, () =>
+      app.listen(port, () =>
         console.log('pplication running on port 3001')
       );
     });
