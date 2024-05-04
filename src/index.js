@@ -15,8 +15,8 @@ try {
   mongoose
     .connect(process.env.DB_URI)
     .then(() => {
-      app.listen(process.env.PORT, () =>
-        console.log(` application listening on port ${process.env.PORT}`)
+      app.listen(process.env.PORT||3001, () =>
+        console.log('pplication running on port 3001')
       );
     });
 } catch (err) {
