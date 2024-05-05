@@ -14,7 +14,7 @@ services:
       - 4000:4000
     environment:
       PORT: 4000
-      DB_URI: mongodb://my_music_db:27017/docker_music
+      DB_URI_REMOTE: mongodb+srv://addisuanley2010:SDUQDvvJvXuxbHct@addisoftware.yekbkc9.mongodb.net/addi
     depends_on:
       - my_music_db
     volumes:
