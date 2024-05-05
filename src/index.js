@@ -14,7 +14,9 @@ app.use("/", musicRoute);
 
 try {
   mongoose
-    .connect(process.env.DB_URI)
+    .connect(process.env.DB_URI_REMOTE)
+    //.connect(process.env.DB_URI)
+
     .then(() => {
       app.listen(port, () =>
         console.log('pplication running on port 3001')
