@@ -11,10 +11,10 @@ services:
   app:
     build: .
     ports:
-      - 4000:4000
+      - 5000:4000
     environment:
       PORT: 4000
-      DB_URI_REMOTE: mongodb+srv://addisuanley2010:SDUQDvvJvXuxbHct@addisoftware.yekbkc9.mongodb.net/addi
+      DB_URI_REMOTE: mongodb+srv://addisuanley2010:SDUQDvvJvXuxbHct@addisoftware.yekbkc9.mongodb.net/addis
     depends_on:
       - my_music_db
     volumes:
