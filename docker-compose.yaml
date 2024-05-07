@@ -11,7 +11,7 @@ services:
   app:
     build: .
     ports:
-      - 5000:4000
+      - 5001:4000
     environment:
       PORT: 4000
       DB_URI_REMOTE: mongodb+srv://addisuanley2010:SDUQDvvJvXuxbHct@addisoftware.yekbkc9.mongodb.net/addis
